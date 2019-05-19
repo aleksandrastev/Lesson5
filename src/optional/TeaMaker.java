@@ -2,7 +2,16 @@ package optional;
 
 public class TeaMaker {
 
-	/* Figure out how to make a cup of tea using the classes below */
+	public static void main(String[] args) {
+
+		Kettle kettle = new Kettle();
+		kettle.getWater();
+		kettle.boil();
+		TeaBag teabag = new TeaBag(TeaBag.CHAMOMILE);
+		Cup cup = new Cup();
+		cup.makeTea(teabag, kettle.getWater());
+
+	}
 
 }
 
@@ -61,5 +70,3 @@ class Cup {
 	}
 
 }
-
-
