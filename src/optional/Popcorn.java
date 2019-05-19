@@ -18,8 +18,8 @@ class Microwave {
 	}
 
 	void setTime(int cookTimeInMinutes) {
-		System.out.println("Microwave says: cook time is set to " + cookTime + " minutes.");
 		this.cookTime = cookTimeInMinutes;
+		System.out.println("Microwave says: cook time is set to " + cookTime + " minutes.");
 	}
 
 	void startMicrowave() {
@@ -59,6 +59,15 @@ public class Popcorn {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+	}
+	
+	public static void main(String[] args) {
+		Microwave mw = new Microwave();
+		Popcorn pc = new Popcorn("Nacho Cheese");
+		mw.putInMicrowave(pc);
+		mw.setTime(2);
+		mw.startMicrowave();
+		
 	}
 	
 }
