@@ -2,8 +2,7 @@ package examples;
 
 public class DuckBreeder {
 	public static void main(String[] args) {
-		
-		
+
 //		Duck morrisey = new Duck("celery", 90/3);
 //		
 //		Duck carniverousCarla = new Duck("frogs", 60/3);
@@ -18,15 +17,13 @@ public class DuckBreeder {
 //		
 //		morrisey.quack();
 //		morrisey.quack();
-		
-		
-		
+
 		// 1. Create an instance of a Duck called Daffy
-		//<type> <name> = <value>
+		// <type> <name> = <value>
 		Duck daffy = new Duck("", 0);
-		
+
 		// 2. Get Daffy to quack
-		
+
 		daffy.quack();
 
 	}
