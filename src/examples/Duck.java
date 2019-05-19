@@ -10,11 +10,25 @@ public class Duck {
 
 	private String favoriteFood;
 	private int lifeExpectancy;
-	
+	private String color;
+	int numberOfDucks;
+	static int numOfObj = 0;
 
 	public Duck(String favoriteFood, int lifeExpectancy) {
 		this.favoriteFood = favoriteFood;
 		this.lifeExpectancy = lifeExpectancy;
+
+	}
+
+	public Duck() {
+
+		numOfObj++;
+		if (numOfObj % 2 == 0) {
+			this.color = "white";
+		} else {
+			this.color = "black";
+		}
+
 	}
 
 	public void waddle() {
@@ -26,7 +40,7 @@ public class Duck {
 	public String toString() {
 		return "This duck likes to eat " + this.favoriteFood + " and will live to be " + this.lifeExpectancy + ".";
 	}
-	
+
 	public void quack() {
 		try {
 			AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File("sounds/quack.wav"));
@@ -37,6 +51,15 @@ public class Duck {
 		} catch (Exception ex) {
 			ex.printStackTrace();
 		}
+	}
+
+	public static Object getNumberOfCreations() {
+		return numOfObj;
+	}
+
+	public String getColor() {
+
+		return color;
 	}
 
 }
